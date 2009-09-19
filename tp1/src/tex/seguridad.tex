@@ -1,0 +1,18 @@
+\section{Monitoreo de aviones en vuelo}
+\subsection{Introducción}
+Como parte de la automatización del estado de los aviones relacionados con el aeropuerto de Camboya es fundamental la capacidad de recibir información directa de los aviones.
+
+Existen dos métodos por el cual un avión puede informar su estado a la torre de control. Por un lado la comunicación directa iniciada por los tripulantes y por el otro una comunicación automática proveniente dispositivo presente en el avión. Este último informa posición, altura y velocidad cada períodos regulares definidos por el fabricante o por las aerolíneas.
+
+La información proveniente del dispositivo automático se realiza mediante un canal abierto y vulnerable a la intromisión de mensajes de intrusos para lo cual se implementan mecanismos de seguridad que aseguran autenticidad del mismo.
+
+\subsection{Presunciones}
+En cuanto al manejo de seguridad, se sabe que se implementará mediante un mecanismo de \emph{security through obscurity} que se basa en enviar una firma generada por un algoritmo distribuído por el fabricante junto al mensaje del avión. Luego la firma será verificada utilizando el mismo algoritmo que supuestamente le dio origen. El algoritmo de firma lo cambia el fabricante cuando le parece pertinente y nos asegura que este estará disponible en todos los aviones a los 5 minutos de publicado. Lo que vamos a tomar como presunción en este tema es que nunca vamos a tener una versión del algoritmo más vieja que la de ningun avión. Es decir, consideramos que a partir que es publicado, nuestro sistema es capaz de obtenerlo en tiempo 0 (o al menos antes que algun avión lo tenga). Esta presunción la necesitamos porque durante los 5 minutos siguientes a la publicación del nuevo algoritmo, se mantendrán dos algoritmos en el sistema, el viejo y el nuevo para no descartar mensajes de aviones todavía no actualizados. Un problema sería si un avión manda un mensaje con un algoritmo que nosotros desconocemos (por no tener la última versión) y como tal tendríamos que descartarlo, cosa no deseada.
+
+\subsection{Diagrama de contexto}
+
+\subsection{Diagrama de objetivos}
+
+\subsubsection{Detalle de objetivos}
+
+\subsection{Discusión}
