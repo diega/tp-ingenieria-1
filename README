@@ -1,3 +1,7 @@
+#### IMPORTANTE ####
+editar los archivos en UTF-8
+####################
+
 Trabajo práctico 1:
 $ cd tp1/src/tex/
 $ latex tp.tex
