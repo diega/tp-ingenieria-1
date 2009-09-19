@@ -1,11 +1,9 @@
-#### IMPORTANTE ####
+######## IMPORTANTE ########
 editar los archivos en UTF-8
-####################
+############################
 
 Trabajo práctico 1:
-$ cd tp1/src/tex/
-$ latex tp.tex
-
-
-Notas:
-ejecutar dos veces el comando latex si se quiere el índice
+* Ejecutar script en tp1/src/sh cambiando el parametro $TP1_HOME para que apunte a la carpeta tp1 del file system de cada uno
+* El script exporta los archivos de dia en tp1/src/dia dejandolos en tp1/generated-sources como PNGs
+* Dentro de los archivos tex hacer referencia a las imágenes en la carpeta ../../generated-sources/ con el mismo nombre del archivo dia y la extensión .png
+* El archivo generado queda en tp1/target/tp.pdf

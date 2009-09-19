@@ -6,3 +6,5 @@
 *.dvi
 *.swp
 *~
+generated-src
+target
