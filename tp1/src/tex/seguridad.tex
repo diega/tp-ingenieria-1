@@ -7,13 +7,27 @@ Existen dos métodos por el cual un avión puede informar su estado a la torre d
 La información proveniente del dispositivo automático se realiza mediante un canal abierto y vulnerable a la intromisión de mensajes de intrusos para lo cual se implementan mecanismos de seguridad que aseguran autenticidad del mismo.
 
 \subsection{Presunciones}
-En cuanto al manejo de seguridad, se sabe que se implementará mediante un mecanismo de \emph{security through obscurity} que se basa en enviar una firma generada por un algoritmo distribuído por el fabricante junto al mensaje del avión. Luego la firma será verificada utilizando el mismo algoritmo que supuestamente le dio origen. El algoritmo de firma lo cambia el fabricante cuando le parece pertinente y nos asegura que éste estará disponible en todos los aviones a los 5 minutos de publicado. Lo que vamos a tomar como presunción en este tema es que nunca vamos a tener una versión del algoritmo más vieja que la de ningun avión. Es decir, consideramos que a partir que es publicado, nuestro sistema es capaz de obtenerlo en tiempo 0 (o al menos antes que algun avión lo tenga). Esta presunción la necesitamos porque durante los 5 minutos siguientes a la publicación del nuevo algoritmo, se mantendrán dos algoritmos en el sistema, el viejo y el nuevo para no descartar mensajes de aviones todavía no actualizados. Un problema sería si un avión manda un mensaje con un algoritmo que nosotros desconocemos (por no tener la última versión) y como tal tendríamos que descartarlo, cosa no deseada.
+En cuanto al manejo de seguridad, se sabe que se implementará mediante un mecanismo de \emph{security through obscurity} que se basa en enviar una firma generada por un algoritmo distribuído por el fabricante junto al mensaje del avión. Luego la firma será verificada utilizando el mismo algoritmo que supuestamente le dio origen. El algoritmo de firma lo cambia el fabricante cuando le parece pertinente y nos asegura que éste estará disponible en todos los aviones a los 5 minutos de publicado. Lo que vamos a tomar como presunción en este tema es que nunca vamos a tener una versión del algoritmo más vieja que la de ningun avión. Es decir, consideramos que a partir que es publicado, nuestro sistema es capaz de obtenerlo en tiempo 0 (o al menos antes que algun avión lo tenga). Esta presunción la necesitamos porque durante los 5 minutos siguientes a la publicación del nuevo algoritmo, se mantendrán dos algoritmos en el sistema, el viejo y el nuevo para no descartar mensajes de aviones todavía no actualizados. Un problema sería si el avión manda un mensaje con un algoritmo que nosotros desconocemos (por no tener la última versión) y como tal tendríamos que descartarlo, acto no deseado.
+
+Una vez que se atravesó la capa de seguridad, el sistema cuenta con un componente adicional denominado \emph{MINGA} que se encarga de transmitir la información a las terminales de operación.
 
 \subsection{Diagrama de contexto}
+\textcolor{red}{TODO}
 
 \subsection{Diagrama de objetivos}
 \includegraphics[scale=0.30]{../../generated-src/objetivos-seguridad.png}
 
 \subsubsection{Detalle de objetivos}
+\paragraph{Discriminar vuelos relevantes al aeropuerto}
+\textcolor{red}{TODO}
+\paragraph{Diferenciar canales de comunicación provenientes del avión}
+Cada comunicación proveniente del avión debe poder distinguirse según su fuente para ser tratada por el agente correspondiente. No es lo mismo una comunicación directa iniciada por el piloto que la comunicación automática proveniente del tranceptor.
+\paragraph{Ingresar estado informado por pilotos al sistema}
+Es importante darle relevancia a la información proveída por los pilotos durante el vuelo. Esta información, al tratarse de comunicaciones entre personas, será ingresada por un operador en la torre de control.
+\paragraph{Lograr comunicación confiable}
+Para cada comunicación proveniente del tranceptor se aplicará un mecanismo de chequeo de firma sustentando la fiabilidad de esto en el compromiso de parte del fabricante. Los mensajes considerados apócrifos serán desechados sin guardar rastros.
+\paragraph{Distribuir cambios}
+Cuando el fabricante considera que es pertinente cambiar el algoritmo de firma, publica un rss y pone en el servidor de descarga la nueva versión.
 
 \subsection{Discusión}
+\textcolor{red}{TODO}
