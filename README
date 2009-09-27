@@ -7,3 +7,5 @@ Trabajo práctico 1:
 * El script exporta los archivos de dia en tp1/src/dia dejandolos en tp1/generated-sources como PNGs
 * Dentro de los archivos tex hacer referencia a las imágenes en la carpeta ../../generated-sources/ con el mismo nombre del archivo dia y la extensión .png
 * El archivo generado queda en tp1/target/tp.pdf
+
+* prueba desde windows
