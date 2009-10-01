@@ -1,19 +1,123 @@
 \section{Mantener información de vuelos actualizada}
+
 \subsection{Introducción}
-La información sobre los vuelos con que cuenta el aeropuerto es la que puede  obtenerse de los sistemas de información de las aerolineas, de los mensajes provenientes de los transceptores, y la que eventualmente recaben los operadores del aeropuerto.
-En el primer caso, el sistema informático del aeropuerto obtiene información relativa a los vuelos programados, es decir, horarios de arribo y de partida, y alteraciones tales como adelantos, retrasos y cancelaciones. También obtenemos de las aerolíneas los datos de los pasajeros que abordaron los aviones que parten, incluyendo su nacionalidad y los familiares que deban  contactarse para cumplir con el mandato de la Ley 10.302.
 
-Los mensajes provenientes de los transceptores son procesados en el sistema y se utilizan para registrar la posición actual de los aviones en el aire que  tienen como destino el aeropuerto. 
-
-Por último, el personal del aeropuerto ingresará al sistema en forma manual información de los vuelos ante eventualidades tales como falta de conectividad con las aerolíneas.
+El mantenimiento actualizado de la información de vuelos resulta fundamental para el funcionamiento del sistema de información que el Aeropuerto Central de Camboya necesita. Esto se debe a que todos los carteles y avisos dependerán de los datos que puedan obtenerse a través del sistema. Para esto resulta necesario tener conectividad con los sistemas de la Aerolíneas, de forma tal que la informaión pueda tomarse directametne de manera on-line o a períodos regulares de tiempo. La información obtenida será almacenada a fin de dar soporte a los sistemas de carteles, de mensajería y para apoyar el cumplimiento de las leyes 10.238 y 10.302.
 
 \subsection{Presunciones}
-Continuando con lo descrito en la introducción, el sistema del aeropuerto para poder ofrecer buena calidad de información necesita que las aerolíneas mantengan actualizada la información de sus vuelos y pasajeros, y que esta última pueda ser accedida y recuperada por el sistema del aeropuerto de manera
-on-line. 
+
+La información sobre los vuelos con que contará el aeropuerto es la que puede  obtener de los sistemas de información de las aerolineas, de los mensajes provenientes de los transceptores, y la que eventualmente recaben los operadores del aeropuerto. Para obtener información de las aerolineas, previo a la implementación del sistema que nos ocupa, se habrán establecido mecanismos de intercambio de información con las aerolíneas, los que podrán ser de diversa naturaleza (sistemas de mensajería, acceso directo a las bases de datos de las aerolíneas, intercambio de archivos con novedade, etc...). El sistema del aeropuerto deberá adaptarse a estos múltiples mecanismos ya que las aerolíneas disponen de diversas plataformas que no están dispuestas a cambiar.
+De estas podremos obtener información relativa a la programación de los vuelos, y alteraciones tales como adelantos, retrasos y cancelaciones. También obtenemos por este canal los datos de los pasajeros que abordaron aviones en el aeropuerto, incluyendo su nacionalidad y los familiares que deban contactarse para cumplir con el mandato de la Ley 10.302.
+En cuanto a los vuelos en el aire, los mensajes provenientes de los aviones, transmitidos por los transceptores, podrán ser procesados en el sistema y se utilizarán para conocer su posición actual y realizar un seguimiento de los vuelos de interés para el aeropuerto, tanto de los que deben arribar como de los que parten. La identificación de los aviones emisores de mensajes se realiza a través de su matrícula. 
+Ante eventualidades tales como falta de conectividad con las aerolíneas, el personal del aeropuerto podrá ingresar la información de los vuelos en forma manual
 
 \subsection{Diagrama de contexto}
+
 \includegraphics[scale=0.40]{../../generated-src/actualizacion-contexto.png}
 
 \subsection{Diagrama de objetivos}
-\includegraphics[scale=0.35, angle=270]{../../generated-src/actualizacion-objetivos.png}
+
+\subsubsection{Diagrama completo}
+
+\includegraphics[scale=0.30, angle=270]{../../generated-src/actualizacion-objetivos.png}
+
+\subsubsection{1.Mantener [información de vuelos actualizada]}
+
+\includegraphics[scale=0.50]{../../generated-src/actualizacion-objetivos-1.png}
+
+\subsubsection{1.1 Lograr[Conocer arribos y partidas de vuelos]}
+
+\includegraphics[scale=0.50]{../../generated-src/actualizacion-objetivos-1-1.png}
+
+\subsubsection{1.1.1.1 Lograr[Actualizaciones manuales de arribos y partidas]}
+
+\includegraphics[scale=0.50]{../../generated-src/actualizacion-objetivos-1-1-1.png}
+
+\subsubsection{2. Lograr[Obtener información de las aerolíneas]}
+
+\includegraphics[scale=0.50]{../../generated-src/actualizacion-objetivos-1-1-2.png}
+
+\subsubsection{1.4 Lograr[Obtener información de los vuelos en el aire]}
+
+\includegraphics[scale=0.45, angle=270]{../../generated-src/actualizacion-objetivos-1-2.png}
+
+\subsubsection{Detalle de los objetivos}
+O1.          Mantener[Información de vuelos actualizada]: Obtener de distintas fuentes, información de los vuelos programados y en el aire, para mantener actualizada la información en el sistema del aeropuerto.
+
+O1.1         Lograr[Conocer arribos y partidas de vuelos]
+
+O1.1.1       Lograr[Sistema no operativo => actualizaciones manuales]: En caso de no poder realizar una actualización automaatizada de la información de los arribos y partidas de vuelos, se habilitará el ingreso manual de la información, como contingencia.
+
+O1.1.1.1     Lograr[Actualizaciones manuales de arribos y partidas]
+
+O1.1.1.1.1   Lograr[Comunicación alternativa con aerolíneas]
+
+O1.1.1.1.1.1 Lograr[Comunicación telefónica]
+
+O1.1.1.1.1.2 Lograr[Intercambio de faxes]
+
+O1.1.1.1.1.3 Lograr[Intercambio de e-mails]
+
+O1.1.1.1.2   Lograr[Ingresar información de arribos y partidad de vuelos]: El objetivo es el ingreso manual de información de vuelos.
+
+O1.1.1.1.2.1 Lograr[Completar formulario de vuelo]: El objetivo a cumplir es que el usuario pueda ingresar la información de un vuelo en el sistema mediante un formulario en pantalla.
+
+R1.1.1.1.2.2 Lograr[Actualizar servidor de datos del aeropuerto]: Se trata de registrar la información ingresada por los usuarios en la base de datos.
+
+O1.1.1.2     Lograr[Informar falta de operatividad del sistema automatizado]: Cuando el sistema no pueda obteber información de las aerolíneas de manera automática, deberá alertar este hecho y habilitar el ingreso manual de información.
+
+R1.1.1.2.1   Lograr[Detectar falta de conexión con servidores de aerolíneas]
+
+R1.1.1.2.2   Lograr[Emitir alertas]
+
+O1.1.2       Lograr[Sistema funcionando => actualizaciones automáticas]: Cuano los canales de comunicación con las aerolíneas estén operativos, la actualización de la información deberá ser automática.
+
+O1.2         Lograr[Obtener novedades de los vuelos]: El objetivo es obtener información de las demoras, adelantos y cancelaciones de los vuelos.
+
+O1.3         Lograr[Obtener novedades de los pasajeros]: Obtener información de los pasajeros, incluyendo nacionalidad y contactos.
+
+O1.4         Lograr[Obtener información de los vuelos en el aire]
+
+O1.4.1       Lograr[Distinguir mensajes de interés]: Distinguir mensajes emitidos por los transceptores de los aviones, que hayan sido emitidos por aviones con destino al ACC o que partieron de este.
+
+O1.4.1.1     Lograr[Conocer los vuelos del aeropuerto]: Cononcer los vuelos por partir, que partieron, que arribaron o están por arribar al ACC.
+
+O1.4.1.2     Avión tiene vuelos en aeropuerto => mensajes avión de interés
+
+R1.4.1.3     Lograr[Identificar avión emisor del mensaje]
+
+O1.4.1.4     No existen dos aviones en el mundo con la misma matrícula
+
+O1.4.2       Lograr[Recibir mensajes de los aviones]
+
+O1.4.2.1     Lograr[Traducción de los mensajes de aviones]
+
+O1.4.2.2     Lograr[Validación de los mensajes de aviones]
+
+O1.4.2.3     Lograr[Captar señales de radio]
+
+O2.          Lograr[Obtener información de las aerolíneas]
+
+R2.1         Lograr[Actualizar servidor de datos del aeropuerto]
+
+O2.2         Lograr[Acceder a información de las aerolíneas]
+
+O2.2.1       Lograr[Conocer servidores de las aerolíneas]: El objetivo es dar a conocer al sistema los datos de los servidores de las aerolíneas, para hacer posible la conexión con estos sistemas.
+
+R2.2.2       Lograr[Establecer conexión con servidores de aerolíneas]
+
+O2.3         Lograr[Información de aerolíneas actualizada]
+
+R2.4         Lograr[Seleccionar registros de interés]
+
+\subsection{Escenarios}
+Describimos a continuación dos escenarios típicos de utilización del sistema. Uno en el cual intervienen usuarios y otro en el que la información es obtenida de manera automática
+
+\subsubsection{Configuración de los servidores de las aerolíneas}
+Este escenario es aquel en el cual un \emph{usuario administrador} ingresa en el sistema los datos de los servidores de las aerolineas. Configura, según el medio utilizado con cada aerolínea, los parámetros necesario para la conexión con ella.
+
+\subsubsection{Ingreso manual de alteraciones en la programación de un vuelo}
+En el caso en que no haya conexión con alguna aerolínea, el sistema emitirá un un alerta que notificará de tal situación. Los \emph{empleados} entonces se comunicarán con la o las aerolíneas con las que se tiene el problema para solicitar el envío de información de los vuelos. Preferentemente se recibirá la información por e-mail de modo que todos puedan verla. 
+La información recibida de esta forma desde las aerolíneas será igresada de forma manual en el sistema. Las alteraciones en la programación de los vuelos se realizan realizando en el sistema una búsqueda del vuelo. Entonces es presentada al usuario una pantalla con los datos de éste que permitirá su modificación.
+
 
