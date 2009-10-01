@@ -1,36 +1,137 @@
 \section{Cumplir las leyes estalecidas por la Honorable Cámara de Representantes Camboyanos}
 \subsection{Introduccion}
-El Aeropuerto Central de Camboya(ACC) necesita cumplir dos nuevas leyes que entraron en vigencia vinculadas con la aeronavegación. En caso de no cumplirse, la responsabilidad recaerá directamente sobre la administración del ACC.
-
-Estas leyes son la Ley 10.238 y la Ley 10.302. A continuación, se explican dichas leyes:
+El Aeropuerto Central de Camboya(ACC) necesita cumplir dos nuevas leyes que entraron en 
+vigencia vinculadas con la aeronavegación. En caso de no cumplirse, la responsabilidad 
+recaerá directamente sobre la administración del ACC.
+Estas leyes son la Ley 10.238 y la Ley 10.302.
+A continuación, se explican dichas leyes:
 \begin{enumerate}
-  \item[Ley 10.238] Ningún habitante camboyano puede salir del país por vía aérea llevando consigo más de el equivalente a U\$S 1000 (mil dólares estadounidenses) en bienes tales como electrónica, efectivo, cheques, metales y priedras preciosas, obras de arte, etc. Esta restricción no afecta a diplomáticos camboyanos que se encuentran viajando por motivos oficiales.
-  \item[Ley 10.302] Ante la eventualidad de que un vuelo saliente del ACC sufra un accidente aéreo, los familiares de aquellas personas que iban a bordo deben ser notificadas en un lapso no mayor a 120 minutos desde el momento en el cual se suscite el siniestro. En el caso de haber extranjeros entre los viajeros la notificación debe ser enviada a las embajadas correspondientes.
+ \item[Ley 10.238] Ningún habitante camboyano puede salir del país por vía aérea llevando consigo
+más de el equivalente a U\$S 1000 (mil dólares estadounidenses) en bienes tales como electrónica,
+efectivo, cheques, metales y priedras preciosas, obras de arte, etc. Esta restricción no afecta
+a diplomáticos camboyanos que se encuentran viajando por motivos oficiales.
+ \item[Ley 10.302] Ante la eventualidad de que un vuelo saliente del ACC sufra un accidente aéreo, los 
+familiares de aquellas personas que iban a bordo deben ser notificadas en un lapso no mayor a 
+120 minutos desde el momento en el cual se suscite el siniestro. En el caso de haber extranjeros 
+entre los viajeros la notificación debe ser enviada a las embajadas correspondientes.
 \end{enumerate}
 
 \subsection{Presunciones}
-La comunicación de un accidente saliente se hará a los familiares o bien a las embajadas por vía telefónica para agilizar y asegurar que esta información llega a destino.
-
-También se asume que en caso de no poder establecer una conversación con el familiar/embajada, si tiene contestador se dejará un mensaje en el mismo y se dará por sentado el aviso y, en caso de no tener contestador, se harán a lo sumo 3 intentos.
+Para cumplir con la ley de notificación de accidente en un vuelo, consideramos que la información 
+relevante a un pasajero estará conformada por su nacionalidad, conocer si es un diplomático y de ser
+asi, si está en vuelo oficial y, por último, tener un contacto para avisar en caso de ocurrencia de
+un accidente.
+Las opciones para notificar las definimos a través de la comunicación telefónica y envío de e-mail.
+Se decidió agregar estas opciones debido a que deseabamos asegurar que el notificación llegue
+a destino.
+Además, consideramos que la notificación via e-mail lo hará automáticamente el sistema al momento de 
+registrarse el accidente en el mismo considerando al aviso automático de tiempo despreciable. 
+Las notificaciones que se realicen por medio de llamadas telefónicas asumimos que se llevarán a cabo
+dentro de un tiempo razonable que no excederá el limite impuesto por la ley.
+Asumimos que al utilizar ambas alternativas, el familiar o la embajada siempre quedará notificada del
+accidente.
+Con respecto a la otra ley, consideramos que el tiempo que le lleva a un empleado de control
+del aeropuerto revisar a los pasajeros es despreciable ya que esperamos que los pasajeros que 
+esten por tomar un vuelo pronto a partir lleguen con anticipación, es decir 2 horas antes de 
+la partida de su vuelo, asi el tiempo de demora en la revisación de sus objetos no influiría 
+en el atraso de un avión. Esta información será brindada únicamente por las aerolineas correspondientes.
+También, asumimos que existirá una lista de objetos y valores precargados para facilitar el cálculo de 
+valores que lleva un pasajero. Además, vamos a permitir que se puedan ingresar nuevos objetos con sus
+respectivos valores en caso de no existir en dicha lista. Esto es algo que decidimos debido a que 
+hace que el sistema intente automatizar la obtención de valores para objetos y, además, pueda ser 
+equitativo al momento de sumar los valores para todos los pasajeros.
 
 \subsection{Diagrama de contexto}
-\includegraphics[scale=0.50]{../../generated-src/legislacion-contexto.png}
+El siguiente diagrama de contexto muestra en detalle las distintas interacciones del sistema con los 
+agentes involucrados en el cumplimiento de las leyes establecidas por la Honorable Cámara de 
+Representantes Camboyanos.
 
-\textcolor{red}{Revisar los estados entre SISTEMA-AEROPUERTO!!!}
+\includegraphics[scale=0.50]{../../generated-src/contexto-leyes.png}
 
 \subsection{Diagrama de objetivos}
-Está sección cuenta con 3 diagramas relacionados. Un diagrama de objetivos inicial dónde se plantea el cumplimiento de las leyes antes mencionadas que derivan en 2 objetivos que se encuentran detallados en hojas separadas.
+Está sección cuenta con varios diagramas de objetivos. 
+El primer diagrama muestra el objetivo principal con 2 subojetivos claramente identificados, que
+son el cumplimiento de las leyes 10.238 y la 10.302.
+El detalle de cada subobjetivo está incluído en diagramas separados para mejorar la legibilidad.
 
-\includegraphics[scale=0.40]{../../generated-src/legislacion1-objetivos.png}
+\includegraphics[scale=0.50]{../../generated-src/inicio_leyes.png}
 
-\begin{figure}
-\centering
-\includegraphics[scale=0.35, angle=270]{../../generated-src/legislacion2-objetivos.png}
-\caption{Diagrama de contexto - Ley 10238}
-\end{figure}
+\subsubsection{Lograr[Cumplir Ley 10.238]}
+En este diagrama existen referencias que no se encuentran contenidas dentro del
+objetivo principal que estamos describiendo. Estas referencias se denotan como REF.O.x
+y están relacionadas con subobjetivos del objetivo [Mantener la información de vuelos actualizada].
 
-\begin{figure}
-\centering
-\includegraphics[scale=0.40, angle=270]{../../generated-src/legislacion3-objetivos.png}
-\caption{Diagrama de contexto - Ley 10302}
-\end{figure}
+\includegraphics[scale=0.40]{../../generated-src/ley_10238_1.png}
+
+\includegraphics[scale=0.50]{../../generated-src/ley_10238_2.png}
+
+\subsubsection{Lograr[Cumplir Ley 10.238]}
+En este diagrama existen referencias que no se encuentran contenidas dentro del
+objetivo principal que estamos describiendo. Estas referencias se denotan como REF.O.x
+y están relacionadas con subobjetivos del objetivo [Mantener la información de vuelos actualizada].
+
+\includegraphics[scale=0.40, angle=270]{../../generated-src/ley_10302_1.png}
+
+\includegraphics[scale=0.35, angle=270]{../../generated-src/ley_10302_2.png}
+
+\subsection{Escenarios}
+\paragraph{Detectar que un avión saliente se accidenta y actuar en consecuencia}
+Para poder detectar que un avión saliente se accidentó se consideran 2 alternativas.
+El avión se accidenta dentro del alcance del radar dónde se reciben señales de los
+transceptores de los aviones o bien detectarlo fuera de este alcance.
+Si la detección está fuera del alcance del radar, se debe consultar a la aerolínea
+para conocer su estado.
+Si la detección está dentro del alcance del radar, el sistema debe procesar los mensajes
+que son enviados por los aviones en vuelo y determinar en base a esta información si
+hubo alguna pérdida de contacto con algún avión. En caso de existir una pérdida de contacto,
+el sistema lanza una alarma que monitorea el operador del avión. Este intenta 
+comunicarse con el avión. Si esta comunicación falla, consideramos que el avión se accidentó y
+el operador del aeropuerto informa al empleado administrativo que ocurrió un accidente.
+Una vez que se conoce que un avión se accidentó, el empleado administrativo debe notificar 
+del siniestro a los familiares, en caso de ser camboyanos, o bien a las embajadas, en caso 
+de ser extranjeros.
+Para esto se debe conocer la lista de pasajeros con la información pertinente. En este
+caso se necesita obtener la nacionalidad, y la información de contacto de cada pasajero.
+Esta información la brinda el sistema. 
+Luego de obtener la lista con los datos necesarios del pasajero, el sistema fitrará
+todos los pasajeros que posean e-mail y hará el envío automático. Además, el empleado
+administrativo tomará la lista de datos de de todos los pasajeros y notificará a cada uno 
+de ellos del siniestro por medio de llamadas telefónicas, siempre considerando que lo hará
+lo más rápido posible registrando dichos tiempos para cumplir con la premisa de la ley (tiempo
+de notificacion del accidente debe ser de < 120min al momento de conocerse el siniestro).
+
+
+\paragraph{Revisar a un pasajero antes de subir a un vuelo}
+El empleado de control obtiene la lista de pasajeros del vuelo que está por partir y la lista de 
+objetos/valor predefinida. Ambas listas son brindadas por el sistema.
+El empleado de control busca al pasajero en la lista y lo apunta para revisación.
+El empleado de control toma todos los objetos de valor del pasajero.
+Para cada uno de esos objetos, el empleado de control debe registrar su valor y lo suma
+a la lista de valores que lleva del pasajero.
+Para obtener el valor de un objeto el empleado de control debe seguir los siguientes pasos:
+Si el objeto es efectivo o cheque se suma directamente. Sino, debe verificar si el objeto en
+la lista de objetos/valor que le brindó el sistema. En caso de existir, obtiene el valor del
+objeto. En caso contrario, se puede obtener el valor por medio del pedido de factura al pasajero 
+o bien por medio de la tasación del objeto a cargo de un tasador.
+En los casos en que el objeto no exista en la lista, el empleado del aeropuerto deberá ingresar 
+el objeto nuevo con su valor.
+
+		
+\subsection{Requerimientos}
+- El sistema debe permitir el ingreso de pasajeros con su nacionalidad, si es un pasajero diplomático, 
+si está en vuelo oficial y contacto para dar aviso en caso de siniestro.
+
+- El sistema debe contar con un listado de objeto/valor para cotejar los valores que lleva un pasajero.
+
+- El sistema debe permitir ingresar nuevos objetos con su correspondiente valor.
+
+- El sistema debe ser capaz de mandar e-mails.
+
+- El sistema debe poder registrar el tiempo de demora de avisos a familiares o embajadas según corresponda.
+
+- El sistema debe registrar el alcance del radar.
+
+- El sistema debe conocer el período máximo de envío de mensajes de los aviones en vuelo. Es decir, tener el
+máximo período en el cual los transceptores emiten señales de radio.
+
+- El sistema debe activar una alarma en caso de pérdida de contacto.
