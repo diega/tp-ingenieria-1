@@ -1,0 +1,28 @@
+\section{Publicación de estado en medios de comunicación}
+\subsection{Introducción}
+Como parte de la automatización del estado de los aviones relacionados con el aeropuerto de Camboya es fundamental la capacidad de publicar la información de los estados de los vuelos en distintos medios de comunicación, ya sean los Carteles/Monitores de los pasillos, Sitio de internet del aeropuerto, y medios masivos automáticos (servicios como Facebook, SMS, RSS, E-Mail, Mobile, etc)
+
+La obtención de información de los vuelos ya fue explicada con anterioridad en otras secciones del informe. En esta sección nos limitaremos solamente a la publicación de dicha información en los distintos medios.
+
+\subsection{Presunciones}
+La única presunción relevante en lo que respecta a publicación del estado de los vuelos es la publicación en medios automáticos (FB, SMS, RSS, etc).
+
+Si bien nuestro sistema podría incorporar un servidor de notificaciones de este estilo, y que maneje también las suscripciones, suponemos que este servicio se lo delegamos a un tercero, estando sólo a cargo del aeropuerto hacer "push" de los estados de los vuelos en los distintos servidores de los proveedores de dichos servicios, y dichos proveedores se encargan de reenviar esa información a quienes corresponda.
+
+También, queda a cargo de los proveedores de dichos servicios el manejo de suscripción a las notificaciones. Ver "Discusión" para más detalles. 
+
+\subsection{Diagrama de contexto}
+\includegraphics[scale=0.5]{../../generated-src/medios-contexto.png}
+El diagrama incluído corresponde a la traza donde la información es recolectada (que también se explica en otros diagramas, por lo que no entramos en detalle) y dónde la información es publicada en los distintos medios de comunicación masivo.
+
+\subsection{Diagrama de objetivos}
+\includegraphics[scale=0.4, angle=270]{../../generated-src/medios-objetivos.png}
+
+\subsection{Discusión}
+En esta pequeña porción del sistema del aeropuerto camboyano el único punto donde surgió una discusión dentor del grupo fue en el manejo de las suscripciones y servicio de notificación a terceros por medios automáticos (SMS, E-Mail, etc)
+
+Una de las opciones es la presentada, donde el servicio se delega a un tercero que se encarga de la suscripción y reenvío de los estados de los vuelos que nuestro sistema recoge y publica en los servidores de los distintos servicios. Por ejemplo, nuestro sistema publica "el vuelo LAN4520 se encuentra en horario" en el servidor de emails, y este se encarga de buscar los usuarios registrados para notificación y les reenvía dicho mensaje.
+
+Otra opción discutida fue la de controlar absolutamente todo desde nuestro sistema y no delegar. Nuestro sistema tiene toda la información, y para estar seguros de que la información es actualizada en tiempo y forma, nosotros hacemos el envío cuando tenemos que hacerlo. Esta opción fue descartada casi de inmediato, pues en los requerimientos (enunciado) ni siquiera están claros cuáles de estos servicios se implementarían, quedando un arduo trabajo de mantenimiento en el sistema que en el fondo es irrelevante ya que hay proveedores de terceros que ya se encargan del tema.
+
+Otra opción discutida (un "híbrido" de las anteriores) fue la de manejar internamente la suscripción y delegar en los sistemas terceros sólo el envío del mensaje. Por ejemplo, el número de celular 15-6204-6339 se registra para información sobre el vuelo LAN4520 en nuestro sistema, nuestro sistema publicaría "15-6204-6339, el vuelo LAN4520 se encuentra en horario" y el servicio tercero de envío de SMS se encargaría de enviar el SMS a ese número. Esta opción también fue descartada porque pensamos que le agrega complejidad innecesaria al sistema, al igual que en la opción B, hay servicios de terceros que se pueden encargar de todo, dejando que nuestro sistema se encargue de lo que debe (mantener la información de los vuelos actualizada). Si bien en los requerimientos generales (enunciado) hacen incapié en que "se estudia la posibilidad de que cualquier persona pueda suscribirse a un servicio de información de un vuelo dado por Internet y reciba esta información en algún medio" no se deduce inmediatamente que la suscripción tenga que estar incorporada en nuestro sistema. Delegar el reenvío de la información en sistemas terceros es una práctica común (newsletters, servidores de email, push notifications, rss) que (a nuestro parecer) deja al sistema "limpio". A nuestro sistema no le importa, ni debe importarle, quien o cuándo vé la información, sino que dicha información esté disponible para ser vista.
