@@ -1,4 +1,4 @@
-\section{Monitoreo de aviones en vuelo}
+\section{Ingresar estado informado por el tranceptor al sistema}
 \subsection{Introducción}
 Como parte de la automatización del estado de los aviones relacionados con el aeropuerto de Camboya es fundamental la capacidad de recibir información directa de los aviones.
 
@@ -21,16 +21,7 @@ El diagrama incluído corresponde a la traza donde el nombre de usuario y la con
 \includegraphics[scale=0.30]{../../generated-src/seguridad-objetivos.png}
 
 \subsubsection{Detalle de objetivos}
-\paragraph{Discriminar vuelos relevantes al aeropuerto}
-\textcolor{red}{TODO}
-\paragraph{Diferenciar canales de comunicación provenientes del avión}
-Cada comunicación proveniente del avión debe poder distinguirse según su fuente para ser tratada por el agente correspondiente. No es lo mismo una comunicación directa iniciada por el piloto que la comunicación automática proveniente del tranceptor.
-\paragraph{Ingresar estado informado por pilotos al sistema}
-Es importante darle relevancia a la información proveída por los pilotos durante el vuelo. Esta información, al tratarse de comunicaciones entre personas, será ingresada por un operador en la torre de control.
 \paragraph{Lograr comunicación confiable}
 Para cada comunicación proveniente del tranceptor se aplicará un mecanismo de chequeo de firma sustentando la fiabilidad de esto en el compromiso de parte del fabricante. Los mensajes considerados apócrifos serán desechados sin guardar rastros.
 \paragraph{Distribuir cambios}
 Cuando el fabricante considera que es pertinente cambiar el algoritmo de firma, publica un rss y pone en el servidor de descarga la nueva versión.
-
-\subsection{Discusión}
-\textcolor{red}{TODO}
