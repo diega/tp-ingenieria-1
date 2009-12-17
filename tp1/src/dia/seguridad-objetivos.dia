@@ -1604,19 +1604,19 @@ al sistema#</dia:string>
     </dia:object>
     <dia:object type="Network - Cloud" version="1" id="O43">
       <dia:attribute name="obj_pos">
-        <dia:point val="19,50"/>
+        <dia:point val="16.3921,48.75"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="19,50;35.5216,57.0668"/>
+        <dia:rectangle val="16.3921,48.75;36.1934,55.8168"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="19,50"/>
+        <dia:point val="16.3921,48.75"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="16.521586138793836"/>
+        <dia:real val="19.801305471556891"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="7.0668414051841921"/>
@@ -1643,10 +1643,8 @@ al sistema#</dia:string>
       <dia:attribute name="text">
         <dia:composite type="text">
           <dia:attribute name="string">
-            <dia:string>#Asegurar disponibilidad
-de nuevo algoritmo en
-el sistema inmediatamente
-luego de su publicación#</dia:string>
+            <dia:string>#Minimizar tiempo de convivencia
+de los dos algoritmos de hash#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="sans" style="0" name="Helvetica"/>
@@ -1655,7 +1653,7 @@ luego de su publicación#</dia:string>
             <dia:real val="0.80000000000000004"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="27.7037,52.658"/>
+            <dia:point val="26.8236,52.208"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -2123,11 +2121,11 @@ contraseña dentro de sistema#</dia:string>
         <dia:point val="22.834,69.5"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="21.3399,56.6813;26.4758,69.5617"/>
+        <dia:rectangle val="20.8839,55.4351;25.3358,69.5579"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="22.834,69.5"/>
-        <dia:point val="26.4141,56.743"/>
+        <dia:point val="25.278,55.493"/>
       </dia:attribute>
       <dia:attribute name="curve_distance">
         <dia:real val="-3.0200312729108565"/>
@@ -2142,10 +2140,10 @@ contraseña dentro de sistema#</dia:string>
     </dia:object>
     <dia:object type="Standard - Text" version="1" id="O56">
       <dia:attribute name="obj_pos">
-        <dia:point val="25,58"/>
+        <dia:point val="25,56.45"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="25,57.405;26.075,58.1525"/>
+        <dia:rectangle val="25,55.855;26.075,56.6025"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -2159,7 +2157,7 @@ contraseña dentro de sistema#</dia:string>
             <dia:real val="0.80000000000000004"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="25,58"/>
+            <dia:point val="25,56.45"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -2178,13 +2176,13 @@ contraseña dentro de sistema#</dia:string>
         <dia:point val="38.6369,69.75"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="16.9473,53.3605;38.707,77.6254"/>
+        <dia:rectangle val="14.6757,52.1105;38.707,77.3969"/>
       </dia:attribute>
       <dia:attribute name="bez_points">
         <dia:point val="38.6369,69.75"/>
         <dia:point val="23,90"/>
-        <dia:point val="12,66"/>
-        <dia:point val="19.3084,53.4289"/>
+        <dia:point val="9.45337,64.75"/>
+        <dia:point val="16.7618,52.1789"/>
       </dia:attribute>
       <dia:attribute name="corner_types">
         <dia:enum val="0"/>
@@ -2200,10 +2198,10 @@ contraseña dentro de sistema#</dia:string>
     </dia:object>
     <dia:object type="Standard - Text" version="1" id="O58">
       <dia:attribute name="obj_pos">
-        <dia:point val="18,54"/>
+        <dia:point val="16.6,54.6"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="18,53.0825;18.715,54.235"/>
+        <dia:rectangle val="16.6,53.6825;17.315,54.835"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -2217,7 +2215,7 @@ contraseña dentro de sistema#</dia:string>
             <dia:real val="1.2347221747040749"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="18,54"/>
+            <dia:point val="16.6,54.6"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
